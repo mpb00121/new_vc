@@ -1,12 +1,13 @@
-name: Lets Start MashaRobot
-on: push
+# ./.github/workflows/rename.yaml
+name: Rename Directory
+
+on:
+  push:
+
 jobs:
-  build:
+  rename:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Find and Replace
-        uses: jacobtomlinson/gha-find-replace@master
-        with:
-          find: "TVA_MUSIC"
-          replace: "MashaRoBot"
+      - run: git mv TVA_MUSIC MashaRoBot
+      - uses: EndBug/add-and-commit@v5.1.0
