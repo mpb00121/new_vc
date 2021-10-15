@@ -8,5 +8,5 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "MashaRoBot"
-          replace: "TVA_MUSIC"
+          find: "TVA_MUSIC"
+          replace: "MashaRoBot"
